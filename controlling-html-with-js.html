@@ -1,0 +1,44 @@
+<head>
+  <style>
+    .delete-btn{
+        margin-left: 20px;
+    }
+  </style>
+  <body>
+    <h1 class='header-main' id='header-main'>Todo List</h1>
+    <p id='text-content'>Items: </p>
+
+    <div>
+      <ul id='list'></ul>
+      <input type='text' id='list-input' />
+      <button class='btn' id='list-btn' onclick='addToList()'>
+        Add To List
+      </button>
+    </div>
+
+    <script>
+      counter = 0
+      function addToList() {
+          const inputValue = document.getElementById('list-input').value
+          if (inputValue.length < 1) return
+
+          const listItem = document.createElement('LI')
+          listItem.id = 'list-item-' + counter
+          const listItemText = document.createTextNode(inputValue)
+          listItem.appendChild(listItemText)
+          document.getElementById('list').appendChild(listItem)
+
+          const deleteButton = document.createElement('button')
+          deleteButton.className = 'delete-btn'
+          deleteButton.innerHTML = 'Delete'
+          deleteButton.onclick = function(){
+            document.getElementById(this.parentNode.id).remove()
+            counter--
+          }
+          document.getElementById('list-item-'+counter).appendChild(deleteButton)
+          counter++
+      }
+
+      
+    </script>
+  </body>
