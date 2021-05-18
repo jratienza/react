@@ -1,0 +1,125 @@
+.container {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-areas:
+        "header header header"
+        "banner banner banner"
+        "body body body"
+        "footer footer footer";
+}
+
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 25px;
+    padding-left: 5px;
+}
+
+.nav-box {
+    flex-direction: row;
+}
+
+.logo {
+    height: 20px;
+    width: 25%;
+    display: flex;
+}
+
+.nav {
+    height: 20px;
+    width: 55%;
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-btn {
+    height: 18px;
+    width: 10%;
+}
+
+.accounts {
+    height: 20px;
+    display: flex;
+    width: 20%;
+    padding: 2px;
+}
+
+.account-btn {
+    width: 10%;
+}
+
+.cart-btn {
+    width: 25%;
+}
+
+.search-btn {
+    width: 10%;
+}
+
+.header {
+    grid-area: header;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.banner {
+    grid-area: banner;
+    height: 15vh;
+}
+
+.body {
+    grid-area: body;
+    max-width: 100%;
+    padding: 10px;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+}
+
+.content-body {
+    width: 80%;
+    height: 50vh;
+}
+
+.content-body .box {
+    max-width: 100%;
+    margin: 2px;
+}
+
+.content-head {
+    height: 10vh;
+}
+
+.content-text {
+    height: 15vh;
+}
+
+.content-img {
+    height: 21vh;
+}
+
+.footer {
+    grid-area: footer;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-content {
+    width: 20%;
+    height: 9vh;
+    margin-top: 1px;
+}
+
+.box {
+    border: 2px solid black;
+    max-width: 100%;
+}
